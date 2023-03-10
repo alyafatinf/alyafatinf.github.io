@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script src="../jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".FadeOut").click(function () {
+          $("#kotak").fadeOut("slow");
+        });
+        $(".FadeIn").click(function () {
+          $("#kotak").fadeTo("slow", 1);
+        });
+        $(".FadeTo").click(function () {
+          $("#kotak").fadeTo("slow", 0.3);
+        });
+      });
+    </script>
+
+    <style type="text/css">
+      body {
+        text-align: center;
+        background-color: #f9c9c9;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #be1b1b;
+      }
+      .kotak {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      #kotak {
+        width: 350px;
+        height: 200px;
+        background: #d69292;
+        border: 1px solid #be1b1b;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Fade Effect</h2>
+    <div class="kotak"><p id="kotak"></p></div>
+    <div>
+      <button class="FadeIn">Fade In</button>
+      <button class="FadeOut">Fade Out</button>
+      <button class="FadeTo">Fade to 0.3</button>
+    </div>
+  </body>
+</html>
